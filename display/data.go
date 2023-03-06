@@ -14,7 +14,9 @@ type Screen struct {
 var (
 	// Screens defines the metadata for each tutorial
 	Screens = map[string]Screen{
-		"dashboard": {"Dashboard", "", dashboardScreen, true},
+		"dashboard":    {"Dashboard", "", dashboardScreen, true},
+		"applications": {"Applications", "", applicationsScreen, true},
+		//"configuration": {"Configuration", "", configurationScreen, true},
 		// "canvas": {"Canvas",
 		// 	"See the canvas capabilities.",
 		// 	canvasScreen,
@@ -174,7 +176,7 @@ var (
 
 	// ScreenIndex  defines how our screens should be laid out in the index tree
 	ScreenIndex = map[string][]string{
-		"":            {"dashboard", "widgets", "collections", "dialogs", "binding"},
+		"":            {"dashboard", "applications", "widgets", "collections", "dialogs", "binding"},
 		"collections": {"list", "table", "tree"},
 		"containers":  {"apptabs", "border", "box", "center", "doctabs", "grid", "scroll", "split"},
 		"widgets":     {"accordion", "button", "card", "entry", "form", "input", "progress", "text", "toolbar"},
